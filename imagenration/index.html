@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen AI Logo Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="input-section">
+            <h1>Zen AI Logo Generator</h1>
+            <div class="form-group">
+                <label for="brandName">Brand Name</label>
+                <input type="text" id="brandName" placeholder="Enter your brand name">
+                
+                <label for="logoType">Logo Type</label>
+                <select id="logoType">
+                    <option value="Wordmark">Wordmark Logo</option>
+                    <option value="Lettermark">Lettermark Logo</option>
+                    <option value="Pictorial Mark">Pictorial Mark</option>
+                    <option value="Mascot">Mascot Logo</option>
+                    <option value="Combination Mark">Combination Mark</option>
+                    <option value="Emblem">Emblem Logo</option>
+                </select>
+
+                <label for="details">Additional Details</label>
+                <textarea id="details" placeholder="Describe additional details for your logo (colors, style, mood, etc.)"></textarea>
+                
+                <label for="imageSize">Image Size</label>
+                <select id="imageSize">
+                    <option value="512x512">512x512</option>
+                    <option value="1024x1024">1024x1024</option>
+                    <option value="1536x1536">1536x1536</option>
+                </select>
+                <button id="generateBtn" onclick="generateImage()">Generate Logo</button>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <div class="zen-circle"></div>
+            <div id="result">
+                <div class="spinner" id="spinner"></div>
+                <img id="generatedImage" style="display: none;">
+                <button id="downloadBtn" onclick="downloadImage()" style="display: none;">Download Logo</button>
+                <p id="status"></p>
+            </div>
+        </div>
+
+        <div class="history-panel">
+            <h2>Design History</h2>
+            <div id="history-items"></div>
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>

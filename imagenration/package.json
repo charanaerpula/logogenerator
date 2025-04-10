@@ -1,0 +1,9 @@
+{
+  "name": "imagenration",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3",
+    "express": "^4.18.2"
+  }
+}
